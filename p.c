@@ -6,6 +6,7 @@ int main()
   long int n;
   //int h=2000;
   int inj=1;
+long int maxinj=1000000;
   int i;
   scanf("%ld",&n);
   int * a= (int *)malloc(sizeof(int)*n);
@@ -17,15 +18,18 @@ int main()
   }
   for(i=0;i<n;i++)
   {
-  int h=100;
+  int h=2000;
   int  s=h-a[i];
+  long int w=inj*a[i];
   int j=i;
   int count =0;
-    while(s>=0)
+    while(s>=0 && w<=maxinj)
     {
       j++;
       s=s-a[j];
       count=count+1;
+	w=w*a[j];
+	
     }
     b[i]=count;
 
