@@ -5,7 +5,7 @@ int main()
 {
   long int n;
   //int h=2000;
-  int inj=1;
+  
 long int maxinj=1000000;
   int i;
   scanf("%ld",&n);
@@ -19,6 +19,7 @@ long int maxinj=1000000;
   for(i=0;i<n;i++)
   {
   int h=2000;
+  int inj=1;
   int  s=h-a[i];
   long int w=inj*a[i];
   int j=i;
@@ -29,7 +30,7 @@ long int maxinj=1000000;
       s=s-a[j];
       count=count+1;
 	w=w*a[j];
-	
+
     }
     b[i]=count;
 
